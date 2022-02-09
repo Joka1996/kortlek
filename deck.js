@@ -41,14 +41,6 @@ export default class Deck {
       this.deck[i] = this.deck[randomIndex];
       this.deck[randomIndex] = tempCard;
     }
-
-    /* //loopa från slut till början KOLLA FÖRKLARING PÅ DETTA,  https://www.youtube.com/watch?v=NxRwIZWjLtE
-      for (let i = this.numberOfCards - 1; i > 0; i--) {
-        const newIndex = Math.floor(Math.random() * (i + 1));
-        const oldValue = this.deck[newIndex];
-        this.deck[newIndex] = this.deck[i];
-        this.deck[i] = oldValue;
-      }*/
     return this.deck;
   }
 
@@ -66,12 +58,13 @@ export default class Deck {
     return cardOnHand;
   }
 
-  //Denna är inte klar, måste göra ett back-end projekt på riktigt så att jag kan fetcha json.
+  //
   hand(cardOnHand) {
-    for (const test of cardOnHand) {
-      console.log(test.suit, test.rank);
+    for (const card of cardOnHand) {
+      console.log(card.suit, "of", card.rank);
     }
 
+    //om en json-fil ska skapas i framtiden
     /* const jsonContent = JSON.stringify(cardOnHand);
       fs.writeFile("/hand.json", jsonContent, "utf8", function (err) {
         if (err) {

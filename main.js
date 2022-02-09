@@ -1,6 +1,6 @@
 "use strict";
 import Deck from "./deck.js";
-const suits = ["diamonds", "clubs", "hearts", "spades"];
+const suits = ["🔹diamonds", "♣clubs", "❤hearts", "♠spades"];
 const ranks = [
   "ace",
   "two",
