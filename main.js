@@ -31,49 +31,30 @@ let outPut = document.getElementById("message");
 //skapa kortlek
 createBTN.addEventListener("click", function () {
   deck.createDeck(suits, ranks);
-  CreatedMessage();
+  outPut.innerHTML = "Kortlek skapad!";
   console.log(deck);
-  disableCreate();
+  //disable create knapp så att inte fler kort läggs till i kortleken
+  createBTN.disabled = true;
 });
 //blanda kortlek
 shuffleBTN.addEventListener("click", function () {
   deck.shuffle();
-  shuffledMessage();
+  outPut.innerHTML = "Kortlek blandad!";
   console.log(deck);
 });
 //ta ett kort
 dealBTN.addEventListener("click", function () {
   deck.deal();
-  renderHand();
+  outPut.innerHTML = "Kort taget!";
 });
 //sortera
 sortBTN.addEventListener("click", function () {
   deck.sortDeck();
   console.log(deck);
-  sortedMessage();
+  outPut.innerHTML = "Kortlek sorterad!";
 });
 //ladda om sidan
 resetBTN.addEventListener("click", function () {
-  refreshPage();
-});
-//funktioner
-function CreatedMessage() {
-  outPut.innerHTML = "Kortlek skapad!";
-}
-function shuffledMessage() {
-  outPut.innerHTML = "Kortlek blandad!";
-}
-function sortedMessage() {
-  outPut.innerHTML = "Kortlek sorterad!";
-}
-
-//disable create knapp så att inte fler kort läggs till i kortleken
-function disableCreate() {
-  createBTN.disabled = true;
-}
-//ladda om sidan
-function refreshPage() {
+  //ladda om sidan
   window.location.reload();
-}
-
-function renderHand() {}
+});

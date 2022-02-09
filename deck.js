@@ -64,7 +64,7 @@ export default class Deck {
       console.log(card.suit, "of", card.rank);
     }
 
-    //om en json-fil ska skapas i framtiden
+    //om en json-fil ska skapas i framtiden som kan fetchas från main.js
     /* const jsonContent = JSON.stringify(cardOnHand);
       fs.writeFile("/hand.json", jsonContent, "utf8", function (err) {
         if (err) {
@@ -104,15 +104,5 @@ export default class Deck {
     //denna fungerar också, men något längre
     //(a.suit > b.suit || (a.suit == b.suit && rankOrder.indexOf(a.rank) - rankOrder.indexOf(b.rank)
     return sortedDeck;
-  }
-  //återställ
-  resetDeck(suits, ranks) {
-    //loopa igenom bägge och lägg till i deck
-    for (let suit of suits) {
-      for (let rank of ranks) {
-        this.deck.push(new Card(rank, suit));
-      }
-    }
-    return this.deck;
   }
 }
