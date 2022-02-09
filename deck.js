@@ -58,7 +58,7 @@ export default class Deck {
     return cardOnHand;
   }
 
-  //
+  //visa kortet lite snyggare
   hand(cardOnHand) {
     for (const card of cardOnHand) {
       console.log(card.suit, "of", card.rank);

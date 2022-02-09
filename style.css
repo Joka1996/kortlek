@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(217, 236, 236);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 5%;
+}
+p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+button {
+  margin: 1.5%;
+  padding: 1.5%;
+}
+button:hover {
+  cursor: pointer;
+}
+
+#message {
+  color: green;
+}
