@@ -27,7 +27,7 @@ let sortBTN = document.getElementById("sortDeck_btn");
 let resetBTN = document.getElementById("resetDeck_btn");
 let outPut = document.getElementById("message");
 
-//eventlyssnare
+//eventlyssnare och funktioner
 //skapa kortlek
 createBTN.addEventListener("click", function () {
   deck.createDeck(suits, ranks);
