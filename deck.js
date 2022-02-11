@@ -1,7 +1,6 @@
 "use strict";
-//const fs = require("fs");
 
-//klass för korten
+//klass för kortet, färger och rank
 class Card {
   constructor(rank, suit) {
     this.suit = suit;
@@ -9,7 +8,7 @@ class Card {
   }
 }
 
-// klass för deck med kort
+// klass för ett deck med kort
 export default class Deck {
   constructor() {
     //en tom array som kan fyllas med kort.
@@ -24,11 +23,6 @@ export default class Deck {
       }
     }
     return this.deck;
-  }
-
-  //för att simpelt hämta length på array deck
-  get numberOfCards() {
-    return this.deck.length;
   }
 
   //blanda korten
@@ -64,15 +58,6 @@ export default class Deck {
     for (const card of cardOnHand) {
       console.log(card.suit, "of", card.rank);
     }
-
-    //om en json-fil ska skapas i framtiden som kan fetchas från main.js
-    /* const jsonContent = JSON.stringify(cardOnHand);
-      fs.writeFile("/hand.json", jsonContent, "utf8", function (err) {
-        if (err) {
-          return console.log(err);
-        }
-        console.log("Sparad som hand.json");
-      });*/
   }
 
   //sortera
@@ -102,8 +87,6 @@ export default class Deck {
           rankOrder.indexOf(a.rank) - rankOrder.indexOf(b.rank)
       )
     );
-    //denna fungerar också, men något längre
-    //(a.suit > b.suit || (a.suit == b.suit && rankOrder.indexOf(a.rank) - rankOrder.indexOf(b.rank)
     return sortedDeck;
   }
 }
