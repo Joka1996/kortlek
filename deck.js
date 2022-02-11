@@ -25,7 +25,7 @@ export default class Deck {
     return this.deck;
   }
 
-  //blanda korten
+  //blanda korten Fisher Yates
   shuffle() {
     for (var i = 0; i < 52; i++) {
       // välj ett kort
@@ -80,7 +80,7 @@ export default class Deck {
       "king",
     ];
     sortedDeck.push(
-      //higher order function. localeCompare
+      //jämför med localeCompare, a-b lägst till högst,
       this.deck.sort(
         (a, b) =>
           a.suit.localeCompare(b.suit) ||
