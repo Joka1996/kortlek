@@ -62,6 +62,7 @@ export default class Deck {
 
   //sortera
   sortDeck() {
+    //ny tom array för den sorterade kortleken
     let sortedDeck = [];
     //specifiera ordningen på korten, rank
     const rankOrder = [
